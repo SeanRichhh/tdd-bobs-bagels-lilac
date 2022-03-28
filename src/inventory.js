@@ -1,48 +1,49 @@
 const inventory = [
     {
-        sku: "BGLO",
+      //Change the sku to item 
+        item: "BGLO",
         price: 0.49,
         name: "Bagel",
         variant: "Onion"
     },
     {
-        sku: "BGLP",
+        item: "BGLP",
         price: 0.39,
         name: "Bagel",
         variant: "Plain"
     },
     {
-        sku: "BGLE",
+        item: "BGLE",
         price: 0.49,
         name: "Bagel",
         variant: "Everything"
     },
     {
-        sku: "BGLS",
+        item: "BGLS",
         price: 0.49,
         name: "Bagel",
         variant: "Sesame"
     },
     {
-        sku: "COF",
+        item: "COF",
         price: 0.99,
         name: "Coffee",
         variant: ""
     },
     {
-        sku: "BGSE",
+        item: "BGSE",
         price: 2.99,
         name: "Bagel Sandwich",
         variant: "Everything",
     },
     {
-        sku: "BGSS",
+        item: "BGSS",
         price: 4.99,
         name: "Bagel Sandwich",
         variant: "Sesame",
     },
     {
-        sku: "BGSN",
+        item: "BGSN",
         price: 2.99,
         name: "Bagel Sandwich",
         variant: "Nutella",

@@ -4,19 +4,20 @@ class Basket {
         this.basket = [];
         this.basketSize = 5;
     };
-    
-    addItemToBasket(sku) {
+    // Changed the sku to item
+    addItemToBasket(item) {
         for (let i = 0; i < inventory.length; i++) {
-            if (inventory[i].sku === sku && this.basket.length < this.basketSize) {
+            if (inventory[i].item === item && this.basket.length < this.basketSize) {
                 this.basket.push(inventory[i]);
+                return "Item in the basket"
             }
         }
-        return 'You cannot add more than 5 items to your basket!'
+        return "You cannot add more than 5 items to your basket!"
     };
 
-    removeItemFromBasket(sku) {
+    removeItemFromBasket(item) {
         for (let i = 0; i < this.basket.length; i++) {
-            if (this.basket[i].sku === sku) {
+            if (this.basket[i].item === item) {
                 this.basket.splice(i, 1)
             }
         }
@@ -25,7 +26,7 @@ class Basket {
 
     getItemPrice(product) {
         for (let i = 0; i < inventory.length; i++) {
-            if (inventory[i].sku === product) {
+            if (inventory[i].item === product) {
                 return `The price of the item is £${inventory[i].price}`
             }
         }
