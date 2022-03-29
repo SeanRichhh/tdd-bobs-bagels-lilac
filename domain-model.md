@@ -54,7 +54,7 @@ showBasket()
 |                         |         |full Capacity|@Conditional flow   |Error@"String"       |
 |                         |         |             |removeItemFromBasket()|filter.[Array]     |
 |                         |         |             |                    |Error@"String"       |
-|Basket size reassigned   |         |             |createBasket()      |@int/number          |
+|Basket size reassigned   |         |             |                    |                     |
 |                         |         |             |getItemPrice()      |@"String" @int/number|
 |                         |         |             |getBasketTotal()    |@"String"@int/Number |
 |                         |         |             |                    |                     |

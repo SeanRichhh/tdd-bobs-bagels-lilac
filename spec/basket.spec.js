@@ -81,8 +81,8 @@ describe("Basket", () => {
     expect(result).toEqual(expected);
   });
 
-  it("a user cannot add more than 5 items to their basket", () => {
-    const expected = 'You cannot add more than 5 items to your basket!'
+  it("a user cannot add more than capacity of Basket", () => {
+    const expected = 'Your basket is full, you can not add anymore items!'
     basket.addItemToBasket('BGLO')
     basket.addItemToBasket('BGLP')
     basket.addItemToBasket('BGLE')
@@ -200,19 +200,40 @@ describe("Basket", () => {
     const result = basket.showBasket()
     expect(result).toEqual(expected);
   });
+//Moved to another spec file 
+  // it("a user can check item price before adding it to the basket", () => {
+  //   const expected = 'The price of the item is £2.99'
+  //   const result = basket.getItemPrice('BGSN')
+  //   expect(result).toEqual(expected);
+  // });
 
-  it("a user can check item price before adding it to the basket", () => {
-    const expected = 'The price of the item is £2.99'
-    const result = basket.getItemPrice('BGSN')
-    expect(result).toEqual(expected);
-  });
-
-  it("a user knows the total price of the items in their basket", () => {
-    const expected = 'The total price of the items in your basket is £1.37'
+  // it("a user knows the total price of the items in their basket", () => {
+  //   const expected = 'The total price of the items in your basket is £1.37'
+  //   basket.addItemToBasket('BGLO')
+  //   basket.addItemToBasket('BGLP')
+  //   basket.addItemToBasket('BGLS')
+  //   const result = basket.getBasketTotal()
+  //   expect(result).toEqual(expected);
+  // });
+  it("creates larger basket", () => {
+    basket.createBasket(6)
+   
+    
     basket.addItemToBasket('BGLO')
     basket.addItemToBasket('BGLP')
+    basket.addItemToBasket('BGLE')
     basket.addItemToBasket('BGLS')
-    const result = basket.getBasketTotal()
-    expect(result).toEqual(expected);
+    basket.addItemToBasket('BGSS')
+    basket.addItemToBasket('BGSN')
+
+    // expect(basket.basket.length).toEqual(basket.basketSize)
+    const result = basket.addItemToBasket('BGSN')
+
+    console.log('basket',basket.basket.length)
+    expect(basket.basket.length).toEqual(basket.basketSize)
+    expect(result).toEqual('Your basket is full, you can not add anymore items!')
+    console.log(result)
   });
+
 });
+

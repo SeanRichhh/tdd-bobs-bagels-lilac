@@ -24,7 +24,8 @@ const inventory = [
         name: "Bagel",
         variant: "Sesame"
     },
-    {
+    { 
+        // Not needed code doesn't really do anything.
         item: "COF",
         price: 0.99,
         name: "Coffee",
